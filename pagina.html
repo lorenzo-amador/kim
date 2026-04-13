@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuestra Historia</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ══ COVER ══ -->
+  <div id="cover">
+    <div class="hearts" id="hearts"></div>
+    <h1>Nuestra<br/>Historia</h1>
+    <p>Febrero 2025 — Hoy</p>
+    <button class="open-btn" onclick="openBook()">Abrir ✦</button>
+  </div>
+
+  <!-- ══ PROGRESS ══ -->
+  <div id="progress-bar"></div>
+  <div id="page-counter"></div>
+
+  <!-- ══ BOOK ══ -->
+  <div id="book-wrapper">
+
+    <!-- Página 1 -->
+    <div class="page active" id="p1">
+      <span class="page-num">Página 01</span>
+      <span class="date-badge">4 de febrero de 2025</span>
+      <h2 class="chapter-title">El inicio inesperado</h2>
+      <div class="page-body">
+        <p>Todo inició en aquella reunión de jóvenes. No sé si fue casualidad o algo más grande, pero ese día, a través de la Lic. Yeny y después Rony, terminé llegando a la iglesia.</p>
+        <p>La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera vez, aunque ya había escuchado de usted antes.</p>
+        <p>Fue un momento sencillo, sin mucho ruido, pero ahora que lo pienso, marcó algo importante.</p>
+      </div>
+      <div class="detail-box">
+        <strong>✦ Detalle que no olvido</strong>
+        Aún recuerdo cuando estaba repartiendo galletas… y me dejó de último 🥹
+      </div>
+
+      <div class="photo-box">
+        <img src="campamento.jpeg" alt="Recuerdo del campamento" class="story-photo" />
+      </div>
+
+      <div class="closing">
+        Ahí empezó una historia que en ese momento no imaginaba.
+      </div>
+    </div>
+
+    <!-- Página 2 -->
+    <div class="page" id="p2">
+      <span class="page-num">Página 02</span>
+      <h2 class="chapter-title">Un paso fuera de lo normal</h2>
+      <div class="page-body">
+        <p>Después cada quien siguió asistiendo normalmente a la iglesia. Usted siempre muy seria, llegaba y se iba.</p>
+        <p>En ese proceso, nuevamente Dios usó a las mismas personas para acercarme más, y fue cuando me propusieron unirme al ministerio de medios. Acepté… aunque siendo sincero, eso no era muy propio de mí.</p>
+        <p>Siempre he sido de perfil bajo, casi invisible. Meterme en algo así era raro, pero aun así dije que sí.</p>
+      </div>
+      <div class="photo-box">
+        <img src="ministerio.jpeg" alt="Recuerdo del ministerio" class="story-photo" />
+      </div>
+
+      <div class="closing">
+        Sin darme cuenta, ya estaba entrando más en su mundo.
+      </div>
+    </div>
+
+    <!-- Página 3 -->
+    <div class="page" id="p3">
+      <span class="page-num">Página 03</span>
+      <span class="date-badge">1 de abril de 2025</span>
+      <h2 class="chapter-title">El primer acercamiento real</h2>
+      <div class="page-body">
+        <p>Ese día comenzamos a hablar, poco, pero fue el inicio. No soy mucho de conversar, así que todo iba tranquilo.</p>
+        <p>Ese mismo mes pasé por la pérdida de un familiar muy querido… y aunque no teníamos mucha cercanía, usted se tomó el tiempo de darme palabras de consuelo.</p>
+        <p>Hoy, viendo hacia atrás, noto cosas que en ese momento no vi.</p>
+      </div>
+      <div class="closing">
+        Ahí empezó a haber algo diferente, aunque todavía no lo entendía.
+      </div>
+    </div>
+
+    <!-- Página 4 -->
+    <div class="page" id="p4">
+      <span class="page-num">Página 04</span>
+      <h2 class="chapter-title">Conversaciones simples</h2>
+      <div class="page-body">
+        <p>Nuestras conversaciones eran básicas.</p>
+        <p><em>"Hola Lorenzo, ¿cómo está?"</em></p>
+        <p><em>"Mire que enviaron la letra de las canciones…"</em></p>
+        <p>Todo giraba alrededor del ministerio.</p>
+        <p>Y bueno… también recuerdo que se iba sin despedirse, qué barbaridad jajaj, pero eso lo vamos a dejar pasar.</p>
+      </div>
+      <div class="photo-box p4-photo-box">
+        <img src="conversacion1.jpeg" alt="Recuerdo de nuestras conversaciones" class="story-photo p4-photo" />
+      </div>
+
+      <div class="closing">
+        Eran conversaciones simples, pero constantes.
+      </div>
+    </div>
+
+    <!-- Página 5 -->
+    <div class="page" id="p5">
+      <span class="page-num">Página 05</span>
+      <span class="date-badge">17 de agosto</span>
+      <h2 class="chapter-title">La primera salida</h2>
+      <div class="page-body">
+        <p>Con el tiempo empezamos a hablar más allá del ministerio: trabajo, estudio… cosas normales.</p>
+        <p>En una de esas conversaciones usted dijo que estaba estresada y quería relajarse. Y salió el plan: después de la iglesia, ir al Juana Laínez.</p>
+        <p>Fuimos, almorzamos primero y luego subimos. El ambiente, el momento… todo se sintió bonito.</p>
+      </div>
+      <div class="detail-box">
+        <strong>✦ Detalle</strong>
+        ¿Se acuerda del de la bicicleta? Usted tenía miedo… y mírela ahora 😄
+      </div>
+
+      <div class="video-box">
+        <video controls preload="metadata" class="story-video">
+          <source src="video5.mp4" type="video/mp4" />
+          Tu navegador no soporta video HTML5.
+        </video>
+      </div>
+
+      <div class="closing">
+        Ese día fue especial para mí, gracias por eso.
+      </div>
+    </div>
+
+    <!-- Página 6 -->
+    <div class="page" id="p6">
+      <span class="page-num">Página 06</span>
+      <span class="date-badge">23 de agosto</span>
+      <h2 class="chapter-title">Más momentos juntos</h2>
+      <div class="page-body">
+        <p>Nuestra segunda salida fue a Playmax. Fue un momento divertido.</p>
+        <p>Me acuerdo que tenía miedo en el tobogán jajaj, y también cuando me puse sus lentes… quedé ciego por un momento 😄</p>
+        <p>Después fuimos a Wendy's y pasamos por su mamá al trabajo.</p>
+      </div>
+      <div class="closing">
+        Pequeños momentos… pero que se fueron quedando.
+      </div>
+    </div>
+
+    <!-- Página 7 -->
+    <div class="page" id="p7">
+      <span class="page-num">Página 07</span>
+      <h2 class="chapter-title">Más cerca poco a poco</h2>
+      <div class="page-body">
+        <p>Después me uní a apoyarle en la célula.</p>
+        <p>Sin darme cuenta, ya compartíamos más tiempo, más espacios… ya no era solo coincidencia.</p>
+      </div>
+      <div class="p7-gallery">
+        <div class="photo-box p7-photo-box">
+          <img src="celula1.jpeg" alt="Recuerdo de célula 1" class="story-photo p7-photo" />
+        </div>
+
+        <div class="photo-box p7-photo-box">
+          <img src="celula2.jpeg" alt="Recuerdo de célula 2" class="story-photo p7-photo" />
+        </div>
+      </div>
+
+      <div class="closing">
+        Ya no era solo coincidir, ya era compartir.
+      </div>
+    </div>
+
+    <!-- Página 8 -->
+    <div class="page" id="p8">
+      <span class="page-num">Página 08</span>
+      <h2 class="chapter-title">Algo empezó a cambiar</h2>
+      <div class="page-body">
+        <p>A finales de año compartimos tiempo con su familia.</p>
+        <p>Ahí empecé a pensar diferente… a verla distinto. Ya no era solo una amistad normal.</p>
+        <p>Algo estaba creciendo.</p>
+      </div>
+
+      <div class="photo-box">
+        <img src="navidad.jpeg" alt="Recuerdo de navidad" class="story-photo" />
+      </div>
+
+      <div class="closing">
+        Ahí comenzó un sentimiento más fuerte.
+      </div>
+    </div>
+
+    <!-- Página 9 -->
+    <div class="page" id="p9">
+      <span class="page-num">Página 09</span>
+      <h2 class="chapter-title">Un cumpleaños diferente</h2>
+      <div class="page-body">
+        <p>Llegó mi cumpleaños. Y yo no soy alguien que celebre mucho eso.</p>
+        <p>Pero esta vez fue diferente… por usted.</p>
+        <p>Sus detalles, su atención… hicieron que ese día fuera especial. Y también fue parte de otro momento importante: el viaje a Santa Lucía.</p>
+        <p>Si se fija, ha estado presente en muchos momentos importantes de mi vida.</p>
+      </div>
+      <div class="closing">
+        Hizo especial algo que normalmente no lo es para mí.
+      </div>
+    </div>
+
+    <!-- Página 10 -->
+    <div class="page" id="p10">
+      <span class="page-num">Página 10</span>
+      <h2 class="chapter-title">La confirmación</h2>
+      <div class="page-body">
+        <p>En el campamento pude compartir más tiempo con usted.</p>
+        <p>Yo ya venía orando, pidiendo una señal: que si usted era la persona para mí, sintiera paz a su lado.</p>
+        <p>Y eso ya lo venía sintiendo.</p>
+        <p>Ese día de los juegos… la miré diferente. Casi le digo todo ahí mismo, pero no era el momento.</p>
+        <p>También sentí que usted era más intencional conmigo… y yo también lo fui.</p>
+      </div>
+        <div class="photo-box p7-photo-box">
+          <img src="contodo1.jpeg" alt="Recuerdo de célula 2" class="story-photo p10-photo" />
+        </div>
+
+      <div class="closing">
+        Ahí lo entendí: algo ya era real.
+      </div>
+    </div>
+
+    <!-- Página 11 -->
+    <div class="page" id="p11">
+      <span class="page-num">Página 11</span>
+      <h2 class="chapter-title">El valor que no sabía que tenía</h2>
+      <div class="page-body">
+        <p>Cuando le dije lo que sentía por mensaje… no sé de dónde salió ese valor.</p>
+        <p>Y luego ir a hablar con el pastor, con su mamá… cosas que nunca imaginé hacer.</p>
+        <p>Ahí entendí que no era solo yo… algo más me estaba dando ese impulso.</p>
+      </div>
+      <div class="closing">
+        Hasta el valor fue parte de la respuesta.
+      </div>
+    </div>
+
+    <!-- Página 12 -->
+    <div class="page" id="p12">
+      <span class="page-num">Página 12</span>
+      <h2 class="chapter-title">Siempre presente</h2>
+      <div class="page-body">
+        <p>El viaje a Trujillo fue otro momento más donde usted estuvo.</p>
+        <p>Y ahí confirmé algo claro: Usted no es cualquier persona en mi vida.</p>
+        <p>Ha estado en momentos importantes, en etapas clave… y eso no es casualidad.</p>
+        <p>También sé que no todo ha sido perfecto. Hemos tenido desacuerdos, y muchas veces yo he sido el causante.</p>
+        <p>Pero usted siempre ha buscado arreglar las cosas… y eso dice mucho.</p>
+      </div>
+      <div class="closing">
+        Usted es alguien realmente especial para mí.
+      </div>
+    </div>
+
+    <!-- Página 13 — PROPUESTA -->
+    <div class="page proposal-page" id="p13">
+      <span class="page-num">Página 13</span>
+      <h2 class="chapter-title" style="text-align:center;">La pregunta</h2>
+      <div class="page-body" style="text-align:center;">
+        <p>Después de todo lo que hemos vivido…</p>
+        <p>Después del tiempo, los momentos, lo aprendido…</p>
+        <p>Hoy quiero preguntarle algo muy importante:</p>
+      </div>
+      <div class="big-question">¿Quiere ser mi novia?</div>
+      <div class="btn-group">
+        <button class="btn-yes" onclick="showYes()">Sí 🤍</button>
+        <button class="btn-no" id="btn-no" onmouseover="moveNoBtn()" ontouchstart="moveNoBtn()">No</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- fin book-wrapper -->
+
+  <!-- ══ YES SCREEN ══ -->
+  <div id="yes-screen">
+    <span class="big-heart">🤍</span>
+    <h2>¡Sí! 🎉</h2>
+    <p>Gracias por dejarme ser parte de su historia.<br/>Esto apenas comienza. ✨</p>
+  </div>
+
+  <!-- ══ NAVEGACIÓN ══ -->
+  <div class="nav-area" id="nav-area" style="display:none;">
+    <button class="nav-btn" id="btn-prev" onclick="changePage(-1)">&#8592;</button>
+    <button class="nav-btn" id="btn-next" onclick="changePage(1)">&#8594;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
