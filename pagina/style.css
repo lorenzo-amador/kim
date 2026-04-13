@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #fdf6ee;
+  --brown: #7c5c3e;
+  --gold: #c9a96e;
+  --dark: #2c1f14;
+  --soft: #f0e6d3;
+  --wood-1: #2b1d12;
+  --wood-2: #1a120b;
+  --ink: #3a2b1f;
+}
+
+body {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 225, 170, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(255, 205, 135, 0.06), transparent 40%),
+    linear-gradient(145deg, var(--wood-1), var(--wood-2));
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f2e3cf;
+}
+
+/* ══════════════════════════════════════════
+   PORTADA
+══════════════════════════════════════════ */
+#cover {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255, 214, 153, 0.08), transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(255, 176, 87, 0.07), transparent 40%),
+    linear-gradient(135deg, #2e1a10, #140b07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: opacity 0.8s ease;
+}
+
+#cover::before {
+  content: '';
+  position: absolute;
+  width: min(560px, 88vw);
+  height: min(78vh, 700px);
+  border-radius: 10px 18px 18px 10px;
+  background:
+    linear-gradient(145deg, #5f3a24, #3e2415);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 221, 180, 0.25),
+    inset 0 0 40px rgba(0, 0, 0, 0.35),
+    0 22px 60px rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+#cover::after {
+  content: '';
+  position: absolute;
+  width: min(560px, 88vw);
+  height: min(78vh, 700px);
+  border-radius: 10px 18px 18px 10px;
+  background:
+    linear-gradient(to right, rgba(20, 10, 6, 0.8) 0 14px, transparent 14px 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#cover h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.1rem, 6vw, 4.2rem);
+  color: #f2d6a6;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.45);
+  animation: fadeUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+#cover p {
+  color: #a08060;
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  animation: fadeUp 1.5s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.open-btn {
+  margin-top: 3rem;
+  padding: 0.8rem 2.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: fadeUp 1.5s ease 1s forwards;
+  opacity: 0;
+  text-transform: uppercase;
+}
+
+.open-btn:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+/* ── Corazones flotantes portada ── */
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart-particle {
+  position: absolute;
+  bottom: -20px;
+  font-size: 1.2rem;
+  animation: floatUp linear infinite;
+  opacity: 0;
+}
+
+/* ══════════════════════════════════════════
+   PROGRESS BAR
+══════════════════════════════════════════ */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--gold);
+  transition: width 0.4s ease;
+  z-index: 50;
+}
+
+/* ══════════════════════════════════════════
+   PAGE COUNTER
+══════════════════════════════════════════ */
+#page-counter {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  color: #a08060;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  z-index: 50;
+}
+
+/* ══════════════════════════════════════════
+   BOOK WRAPPER
+══════════════════════════════════════════ */
+#book-wrapper {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  perspective: 1800px;
+}
+
+#book-wrapper::before {
+  content: '';
+  position: absolute;
+  width: min(650px, 96vw);
+  height: min(88vh, 760px);
+  border-radius: 10px 14px 14px 10px;
+  background:
+    linear-gradient(to right, rgba(65, 41, 25, 0.9) 0 14px, rgba(83, 55, 35, 0.65) 14px 22px, rgba(30, 20, 12, 0.35) 22px 100%);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(231, 196, 146, 0.16);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ══════════════════════════════════════════
+   PÁGINAS
+══════════════════════════════════════════ */
+.page {
+  display: none;
+  position: absolute;
+  width: min(520px, 92vw);
+  min-height: 70vh;
+  max-height: 85vh;
+  background:
+    linear-gradient(135deg, #fffaf0 0%, #f8ecd8 100%);
+  border-radius: 4px 12px 12px 4px;
+  border: 1px solid #e2cfad;
+  padding: 3rem 2.5rem 2.5rem;
+  box-shadow:
+    -8px 0 18px rgba(0, 0, 0, 0.34),
+     8px 0 28px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+    inset -3px 0 10px rgba(0, 0, 0, 0.08);
+  animation: pageIn 0.5s ease forwards;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Estados para transición tipo hoja */
+.page.turn-out-next,
+.page.turn-out-prev,
+.page.turn-in-next,
+.page.turn-in-prev {
+  animation: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* Lomo del libro */
+.page::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: linear-gradient(to right, #b9915d, #ead9ba);
+  border-radius: 4px 0 0 4px;
+}
+
+.page::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 18px;
+  top: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(177, 137, 82, 0.16);
+  pointer-events: none;
+}
+
+/* ── Número de página ── */
+.page-num {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 0.7rem;
+  color: #b09070;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ── Badge de fecha ── */
+.date-badge {
+  display: inline-block;
+  background: var(--soft);
+  border: 1px solid var(--gold);
+  color: var(--brown);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+}
+
+/* ── Título del capítulo ── */
+.chapter-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  color: var(--dark);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #ddd0c0;
+}
+
+/* ── Cuerpo de texto ── */
+.page-body {
+  color: #4a3728;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+.page-body p {
+  margin-bottom: 1rem;
+}
+
+/* ── Caja de detalle ── */
+.detail-box {
+  background: var(--soft);
+  border-left: 3px solid var(--gold);
+  padding: 0.8rem 1rem;
+  margin: 1.2rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.88rem;
+  color: var(--brown);
+  font-style: italic;
+}
+
+.detail-box strong {
+  display: block;
+  font-style: normal;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+/* ── Video en página ── */
+.video-box {
+  margin: 1.2rem 0;
+}
+
+.story-video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #d8c3a0;
+  background: #000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.photo-box {
+  margin: 1.2rem 0;
+}
+
+.story-photo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #d8c3a0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  object-fit: cover;
+}
+
+/* Página 7 - galería compacta y visualmente atractiva */
+.p7-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 0.6rem;
+}
+
+.p7-photo-box {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #fff8ec, #f3e2c8);
+  border: 1px solid rgba(201, 169, 110, 0.45);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.p7-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  filter: saturate(1.04) contrast(1.03);
+}
+
+.p7-photo:hover {
+  transform: scale(1.04);
+  filter: saturate(1.12) contrast(1.06);
+}
+
+/* Página 4 - imagen más pequeña para evitar scroll */
+.p4-photo-box {
+  margin: 0.8rem 0 0.4rem;
+}
+
+.p4-photo {
+  width: min(100%, 260px);
+  max-height: 190px;
+  margin: 0 auto;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.p4-photo:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: saturate(1.08) contrast(1.04);
+}
+
+/* ── Cierre de página ── */
+.closing {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #d0c0a8;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--brown);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════
+   PÁGINA DE PROPUESTA (última)
+══════════════════════════════════════════ */
+.proposal-page {
+  text-align: center;
+  position: relative;
+}
+
+.big-question {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  color: var(--dark);
+  line-height: 1.4;
+  margin: 1.5rem 0 2rem;
+}
+
+/* ── Botones de propuesta ── */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  position: relative;
+  min-height: 80px;
+}
+
+.btn-yes {
+  padding: 0.9rem 2.5rem;
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  border-radius: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.4);
+}
+
+.btn-yes:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(201, 169, 110, 0.6);
+}
+
+.btn-no {
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: #b09070;
+  border: 1px solid #d0c0a8;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: left 0.2s ease, top 0.2s ease;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-no:hover {
+  color: #8a6a50;
+}
+
+/* ══════════════════════════════════════════
+   PANTALLA DE SÍ
+══════════════════════════════════════════ */
+#yes-screen {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 210, 140, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(255, 175, 90, 0.06), transparent 40%),
+    linear-gradient(135deg, #26170f, #0e0805);
+  z-index: 200;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+#yes-screen .big-heart {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: pulse 1.5s ease infinite, fadeUp 1s ease 0.2s forwards;
+  opacity: 0;
+}
+
+#yes-screen h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 7vw, 4rem);
+  color: var(--gold);
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+#yes-screen p {
+  color: #c8a87a;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  max-width: 400px;
+  line-height: 1.8;
+  animation: fadeUp 1s ease 0.5s forwards;
+  opacity: 0;
+}
+
+/* ══════════════════════════════════════════
+   NAVEGACIÓN
+══════════════════════════════════════════ */
+.nav-area {
+  position: fixed;
+  bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 50;
+}
+
+.nav-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid #8a6238;
+  background: linear-gradient(145deg, rgba(60, 35, 20, 0.95), rgba(29, 17, 10, 0.95));
+  color: #e4c08a;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 218, 160, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.nav-btn:hover {
+  background: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
+}
+
+.nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════
+   SCROLLBAR PERSONALIZADO
+══════════════════════════════════════════ */
+.page::-webkit-scrollbar {
+  width: 4px;
+}
+
+.page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.page::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+/* ══════════════════════════════════════════
+   ANIMACIONES
+══════════════════════════════════════════ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: rotateY(-8deg) translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0) translateX(0);
+  }
+}
+
+/* Transición unificada tipo portada -> primera página */
+@keyframes pageFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE MÓVIL
+══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .page {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .chapter-title {
+    font-size: 1.3rem;
+  }
+
+  .page-body {
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .btn-yes {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  #yes-screen h2 {
+    font-size: 2.5rem;
+  }
+
+  #yes-screen .big-heart {
+    font-size: 4rem;
+  }
+
+  .p7-gallery {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .p7-photo {
+    aspect-ratio: 16 / 10;
+  }
+
+  .p4-photo {
+    width: min(100%, 220px);
+    max-height: 160px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 360px) {
+  .page {
+    padding: 2rem 1.2rem 1.5rem;
+  }
+
+  .open-btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page.turn-out-next,
+  .page.turn-out-prev,
+  .page.turn-in-next,
+  .page.turn-in-prev {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
