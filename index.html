@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💕 Nuestro Diario de Amor</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💕 Nuestra pequeña historia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
     <!-- ===== PARTÍCULAS DE CORAZONES ===== -->
     <div class="hearts-container" id="heartsContainer"></div>
 
@@ -15,40 +16,38 @@
     <div id="intro-screen">
         <div class="intro-stars" id="introStars"></div>
         <div class="intro-heart">💖</div>
-        <h1 class="intro-title">Para Ti, Mi Amor</h1>
-        <p class="intro-subtitle">Un diario escrito con el corazón...</p>
-        <button class="intro-btn" onclick="openDiary()">
-            💌 Abrir con Amor
-        </button>
+        <h1 class="intro-title">Para usted</h1>
+        <p class="intro-subtitle">Un escrito con el corazón...</p>
+        <button class="intro-btn" onclick="openDiary()">💌 Abrir con Amor</button>
     </div>
 
     <!-- ===== TÍTULO PRINCIPAL ===== -->
-    <div class="main-title" id="mainTitle" style="display:none;">
-        <h1>💕 Nuestro Diario de Amor 💕</h1>
-        <p>Cada página, un pedacito de mi corazón para ti</p>
+    <div class="main-title" id="mainTitle" style="display: none">
+        <h1>💕 Nuestra pequeña historia 💕</h1>
+        <p>Cada página, un pedacito de mi corazón para usted</p>
     </div>
 
     <!-- ===== LIBRO ===== -->
-    <div class="book-wrapper" id="bookWrapper" style="display:none;">
+    <div class="book-wrapper" id="bookWrapper" style="display: none">
         <div class="book" id="mainBook">
-
             <!-- ===== PORTADA ===== -->
             <div class="book-cover" id="bookCover">
                 <div class="cover-texture"></div>
                 <div class="cover-photo-wrap">
-                    <img src="nosotros.jpeg" alt="Kimberly" class="cover-photo">
+                    <img src="nosotros.jpeg" alt="Kimberly" class="cover-photo" />
                 </div>
-                <div class="cover-title">Nuestro Diario<br>de Amor</div>
-                <div class="cover-subtitle">Escrito con cada latido de mi corazón</div>
+                <div class="cover-title">Nuestra pequeña historia</div>
+                <div class="cover-subtitle">
+                    Realizado con todo el corazón
+                </div>
                 <div class="cover-date" id="coverDate"></div>
                 <button class="open-btn" onclick="openBook()">
-                    📖 Abrir el Diario
+                    📖 Abrir
                 </button>
             </div>
 
             <!-- ===== PÁGINAS ===== -->
             <div class="book-pages" id="bookPages">
-
                 <!-- PÁGINA 1 - El Primer Día -->
                 <div class="page active" id="page-1">
                     <div class="page-header">
@@ -59,28 +58,36 @@
                     <div class="page-content">
                         <h2 class="page-title">El Primer Capítulo de Nosotros</h2>
                         <p class="page-text">
-                            Hola Kim,<br><br>
-                            Todo inició en aquella reunión de jóvenes. No sé si fue casualidad o algo más grande, pero ese día, a través de la Lic. Yeny y después Rony, terminé llegando a la iglesia.
-
-La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera vez, aunque ya había escuchado de usted antes.
+                            Hola Kimberly<br/><br/>
+                            Todo inició en aquella reunión de jóvenes no sé si fue
+                            casualidad o algo más grande, pero ese día, a través de la Lic.
+                            Yeny y después Rony, terminé llegando a la iglesia a compartir
+                            un poco con los jovenes y ese fue mi regreso al camino del
+                            señor. La reunión fue especial la anecdota de la galleta que ya
+                            le eh comentado que barbaridad jajaaj… Pero ahi fue cuando la
+                            pude conocer por primera vez, aunque ya había escuchado de usted
+                            antes.
                         </p>
                         <div class="strategic-photo">
-                            <img src="campamento.jpeg" alt="Nuestro primer recuerdo">
+                            <img src="campamento.jpeg" alt="Nuestro primer recuerdo" />
                         </div>
                         <div class="highlight-box">
-                            "Desde el primer momento que te vi, supe que algo
-                            en mi mundo había cambiado para siempre..."
+                            "No sabia que algo en mi mundo había
+                            cambiado para siempre porque aunque inicialmente no nos volvimos
+                            a llevar despues por obra del señor coincidimos en el Ministerio
+                            de Medios y ahi comenzamos una bonita amistad"
                         </div>
                         <p class="page-text">
-                            No sabía entonces que esa persona que apareció ante mí
-                            se convertiría en mi <em>lugar favorito</em>, en mi
-                            <strong>persona especial</strong>, en la razón más
-                            hermosa de sonreír cada mañana.
+                            No sabía entonces que esa persona que apareció ante mí se
+                            convertiría en mi <em>lugar favorito</em>, en mi
+                            <strong>persona especial</strong>, en la razón más hermosa de
+                            sonreír cada mañana.
                         </p>
                         <div class="page-decoration">🌹 ✨ 🌹 ✨ 🌹</div>
                         <p class="page-text">
-                            Gracias por existir y le doy gracias al señor por cruzarse en mi camino.
-                            Gracias por ser tú.
+                            Gracias por existir y le doy gracias al señor por cruzarse en mi
+                            camino, despues de tanto esperar y buscar, finalmente la
+                            encontré a usted.
                         </p>
                         <div class="signature">
                             Con todo mi amor,
@@ -92,31 +99,86 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                 <!-- PÁGINA 2 - Lo Que Amo De Ti -->
                 <div class="page" id="page-2">
                     <div class="page-header">
-                        <span class="page-date">💛 Las Cosas Que Amo De Ti</span>
+                        <span class="page-date">💛 Las Cosas Que Me Gustan de Usted</span>
                         <span class="page-emoji">⭐</span>
                         <span class="page-number">Pág. 02</span>
                     </div>
                     <div class="page-content">
-                        <h2 class="page-title">Todo Lo Que Eres</h2>
+                        <h2 class="page-title">Todo Lo Que Es</h2>
+                        <div style="
+                  float: right;
+                  width: 150px;
+                  margin: 5px 0 10px 15px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                ">
+                            <img src="Kimberly.jpeg" alt="Kimberly" style="
+                    width: 100%;
+                    border: 3px solid var(--dorado);
+                    border-radius: 10px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    transform: rotate(3deg);
+                  " />
+                            <img src="lasky.jpeg" alt="Kimberly con lentes" style="
+                    width: 100%;
+                    border: 3px solid var(--dorado);
+                    border-radius: 10px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    transform: rotate(-2deg);
+                  " />
+                            <img src="lentes.jpeg" alt="Lasky" style="
+                    width: 100%;
+                    border: 3px solid var(--dorado);
+                    border-radius: 10px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    transform: rotate(4deg);
+                  " />
+                            <img src="EXPO.jpg" alt="Expo" style="
+                    width: 100%;
+                    border: 3px solid var(--dorado);
+                    border-radius: 10px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    transform: rotate(-3deg);
+                  " />
+                        </div>
                         <p class="page-text">
-                            Si tuviera que escribir todo lo que amo de ti,
-                            necesitaría mucho tiempo para escribirlo cada uno de ellas. Pero déjeme
-                            intentarlo..
+                            Si tuviera que escribir todo lo que me gusta de usted,
+                            necesitaría mucho tiempo para escribirlo cada uno de ellas pero
+                            lo intentare..
                         </p>
                         <ul class="memory-list">
-                            <li>Amo tu sonrisa, esa que ilumina cualquier cuarto oscuro</li>
-                            <li>Amo tu risa, el sonido más bonito que he escuchado</li>
-                            <li>Amo tu forma de ver el mundo, tan única y especial</li>
-                            <li>Amo tu corazón enorme, siempre lleno de bondad</li>
-                            <li>Amo tus ojos, donde me pierdo cada vez que te miro</li>
-                            <li>Amo tu fuerza, es admirable su forma de enfrentar las adversidades</li>
-                            <li>Amo tus locuras, las que compartimos juntos</li>
-                            <li>Amo su forma de ser, a veces me estresa pero me gusta que sea tan autentica</li>
-                            <li>Amo cómo me haces sentir el más afortunado del mundo</li>
+                            <li>Me gusta su sonrisa, esa que ilumina mi dia</li>
+                            <li>Me gusta risa, el sonido más bonito que he escuchado</li>
+                            <li>Me gusta su forma de ver el mundo, tan única y especial</li>
+                            <li>Me gusta su corazón enorme, siempre lleno de bondad</li>
+                            <li>
+                                Me gusta sus ojos, esos dos luceros que el señor le regalo
+                            </li>
+                            <li>
+                                Me gusta su fuerza, es admirable su forma de enfrentar las
+                                adversidades y aun así mantener esa luz que la caracteriza
+                            </li>
+                            <li>
+                                Me gusta que es alguien bien espiritual y pone al señor ante
+                                todo y confia en el su fe es inmenza en el señor
+                            </li>
+                            <li>
+                                Me gusta su forma de ser, a veces me estresa jajaj pero me
+                                gusta que sea tan autentica conmigo y con los demás, es algo
+                                que admiro mucho de usted
+                            </li>
+                            <li>
+                                Me gusta cómo me haces sentir el más afortunado del mundo su
+                                forma de querer es unica
+                            </li>
                         </ul>
                         <div class="highlight-box">
-                            "Eres la persona más extraordinaria que he conocido,
-                            y cada día me enamoro más de quien eres."
+                            "Es una persona maravillosa en todos los sentidos el señor me
+                            bendijo al conocerla y poder compartir parte de su vida conmigo,
+                            el señor dijo esta muchacha solo enojada pasa le mandare alguien
+                            para que la enoje mas pero que la haga reir y claro que la
+                            quiera como se merece."
                         </div>
                     </div>
                 </div>
@@ -132,40 +194,48 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                         <h2 class="page-title">Memorias Que Atesoro</h2>
                         <div class="photo-grid">
                             <figure class="photo-card">
-                                <img src="campamento.jpeg" alt="Tu sonrisa">
+                                <img src="campamento.jpeg" alt="Tu sonrisa" />
                                 <figcaption>Cuando nos conocimos 💕</figcaption>
                             </figure>
                             <figure class="photo-card">
-                                <img src="ministerio.jpeg" alt="Campamento juntos">
+                                <img src="ministerio.jpeg" alt="Campamento juntos" />
                                 <figcaption>Servir Juntos✨</figcaption>
                             </figure>
                             <figure class="photo-card">
-                                <img src="celula1.jpeg" alt="Celula 1" class="memory-video">
+                                <img src="celula1.jpeg" alt="Celula 1" class="memory-video" />
                                 <figcaption>Celula✝️</figcaption>
                             </figure>
                             <figure class="photo-card">
-                                <img src="contodo1.jpeg" alt="Celula 2" class="memory-video">
+                                <img src="contodo1.jpeg" alt="Celula 2" class="memory-video" />
                                 <figcaption>Campamento🔥</figcaption>
                             </figure>
                             <figure class="photo-card">
-                                <img src="navidad.jpeg" alt="Navidad especial">
+                                <img src="navidad.jpeg" alt="Navidad especial" />
                                 <figcaption>Navidad 🎄</figcaption>
                             </figure>
                             <figure class="photo-card">
-                                <img src="trujillo.jpeg" alt="Viaje a Trujillo">
+                                <img src="trujillo.jpeg" alt="Viaje a Trujillo" />
                                 <figcaption>Viaje a Trujillo ✈️</figcaption>
                             </figure>
                         </div>
                         <p class="page-text">
-                            Cada momento con usted se convirtio en algo especial, y muchos de ellos los vivi en mi vida por primera vez y ahi estaba usted  Estos son algunos que nunca olvidaré:
+                            Cada momento con usted se convirtio en algo especial, y muchos
+                            de ellos los vivi en mi vida por primera vez y ahi estaba usted
+                            Estos son algunos que nunca olvidaré:
                         </p>
                         <ul class="memory-list">
-                            <li>Esas noches largas hablando de todo y de nada</li>
+                            <li>Esas mensajes largos hablando de todo</li>
                             <li>Las carcajadas que nos dieron sin razón aparente</li>
-                            <li>Cuando me tomaste de la mano por primera vez</li>
-                            <li>Cada abrazo suyo que siente como llegar a casa</li>
-                            <li>Las aventuras que vivimos juntos, grandes y pequeñas</li>
-                            <li>Las salidas que tuvimos, el viaje a trujillo</li>
+                            <li>Cuando me tomo del brazo la primera vez</li>
+                            <li>La celebracion de mi cumpkleaños</li>
+                            <li>
+                                La salida al Juana Lainez y nuestro aventura en bicicleta ahi
+                                tengo el video jajaja
+                            </li>
+                            <li>
+                                Todos los momentos que compartimos el viaje a
+                                Trujillo, la navidad juntos, el campamento, las celulas, cada momento que compartimos es un recuerdo que atesoro y que me hace sonreír cada vez que
+                            </li>
                         </ul>
                         <div class="page-decoration">🎞️ 💕 🎞️ 💕 🎞️</div>
                     </div>
@@ -174,34 +244,37 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                 <!-- PÁGINA 4 - Carta de Amor -->
                 <div class="page" id="page-4">
                     <div class="page-header">
-                        <span class="page-date">💌 Carta Para Ti</span>
+                        <span class="page-date">💌 Carta Para usted</span>
                         <span class="page-emoji">✉️</span>
                         <span class="page-number">Pág. 04</span>
                     </div>
                     <div class="page-content">
-                        <h2 class="page-title">Lo Que Mi Corazón Quiere Decirte</h2>
+                        <h2 class="page-title">Lo Que Mi Corazón Quiere Decirle</h2>
                         <p class="page-text">
-                            Mi amor,<br><br>
-                            Se que como sabra no soy alguien muy expresivo y hablar no es lo mio pero quiero poder decirle un poco de lo que siento por usted  Por eso las escribo aquí, para que las
-                            leas y sepas exactamente lo que siento.
+                            Mi Kimberly,<br /><br />
+                            Se que como sabra no soy alguien muy expresivo y hablar no es lo
+                            mio pero quiero poder decirle un poco de lo que siento por
+                            usted, aunque usted me ve ahi todo frio si se querer y de una
+                            manera bonita y estoy trabajando para poder darle todo el amor
+                            que usted se merece por eso las escribo aquí, para que las leas
+                            y sepa exactamente lo que siento.
                         </p>
                         <div class="highlight-box">
-                            "Con usted  aprendí que el amor no es solo un sentimiento,
-                            es una decisión que se toma cada día al despertar."
+                            "Con usted aprendí que el amor no es solo un sentimiento, es una
+                            decisión que se toma cada día al despertar."
                         </div>
                         <p class="page-text">
-                            Quiero que sepa que en mis días más difíciles,
-                            pensar en ti es lo que me da fuerzas. Tu existencia
-                            en mi vida es el regalo más grande que el señor me ha regalado.
-                            <br><br>
-                            No soy perfecto, pero contigo quiero ser la
-                            <em>mejor versión de mí mismo</em>, cada día,
-                            sin excepción.
+                            Quiero que sepa que en mis días más difíciles pensar en usted es
+                            lo que me da fuerzas desde que la conoci su existencia en mi vida es el regalo más
+                            grande que el señor me ha regalado.
+                            <br /><br />
+                            No soy perfecto, pero con usted quiero ser la
+                            <em>mejor versión de mí mismo</em>, cada día, sin excepción
                         </p>
                         <div class="page-decoration">💌 🌹 💌 🌹 💌</div>
                         <div class="signature">
                             Juntos siempre,
-                            <div class="signature-line">El que te ama 💖</div>
+                            <div class="signature-line">El que la ama 💖</div>
                         </div>
                     </div>
                 </div>
@@ -216,36 +289,39 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                     <div class="page-content">
                         <h2 class="page-title">Lo Que Te Prometo</h2>
                         <p class="page-text">
-                            Estas no son palabras vacías. Son compromisos
-                            que hago desde lo más profundo de mi ser:
+                            Estas no son palabras vacías son compromisos que hago desde lo
+                            más profundo de mi ser:
                         </p>
                         <div class="promise-item">
                             <div class="promise-number">1</div>
-                            <span>Prometerte estar siempre, en los días de sol y en las tormentas más fuertes</span>
+                            <span>Prometerle estar siempre, en los días buenos y en los
+                                dias malos</span>
                         </div>
                         <div class="promise-item">
                             <div class="promise-number">2</div>
-                            <span>Hacerte reír todos los días, aunque sea con mis chistes malos y se enoje conmigo pero son detallitos </span>
+                            <span>Hacerla reír todos los días aunque sea con mis chistes malos
+                                y se enoje conmigo pero son detallitos usted sabe que lo hago con amor jajaja
+                            </span>
                         </div>
                         <div class="promise-item">
                             <div class="promise-number">3</div>
-                            <span>Escucharte siempre, con toda mi atención y mi corazón abierto</span>
+                            <span>Escucharla y respetarla siempre con toda mi atención y mi corazón
+                                abierto</span>
                         </div>
                         <div class="promise-item">
                             <div class="promise-number">4</div>
-                            <span>Recordarte cada día lo hermosa e increíble que eres</span>
+                            <span>Recordarle cada día lo hermosa e increíble que es</span>
                         </div>
                         <div class="promise-item">
                             <div class="promise-number">5</div>
-                            <span>Crecer contigo , aprender de ti y construir algo hermoso juntos</span>
+                            <span>Crecer juntos, aprender de de usted y construir algo hermoso
+                                juntos</span>
                         </div>
                         <div class="promise-item">
                             <div class="promise-number">6</div>
                             <span>Colocar al señor como el centro de la relacion</span>
                         </div>
-                        <div class="highlight-box">
-                            "Se lo prometo." 💍
-                        </div>
+                        <div class="highlight-box">"Se lo prometo." 💍</div>
                     </div>
                 </div>
 
@@ -258,27 +334,30 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                     </div>
                     <div class="page-content">
                         <h2 class="page-title">Lo Que Sueño Para Nosotros</h2>
-                                               <p class="page-text">
-                            Cuando pienso en el futuro, siempre apareces tú.
-                            No puedo imaginar ningún mañana que no tenga
-                            su nombre escrito en él. Estos son mis sueños
-                            para nosotros:
+                        <p class="page-text">
+                            Cuando pienso en el futuro siempre aparece usted
+                            No puedo imaginar ningún mañana que no tenga su nombre escrito en él.
+                            Estos son mis sueños para nosotros:
                         </p>
                         <ul class="memory-list">
-                            <li>Viajar juntos y descubrir nuevos lugares</li>
-                            <li>Crecer espiritualmente</li>
+                            <li>Crecer espiritualmente y servirle juntos al señor</li>
+                           <li>Ser tu apoyo incondicional en cada sueño que tenga</li> 
+                           <li>Viajar juntos y descubrir nuevos lugares</li>
                             <li>Envejecer juntos y seguir eligiéndonos cada día</li>
                             <li>Crear recuerdos que duren toda una vida</li>
-                            <li>Ser tu apoyo incondicional en cada sueño que tengas</li>
+                            <li>Construir un hogar lleno de amor, risas y fe</li 
                         </ul>
                         <div class="highlight-box">
-                            "Quiero que el resto de mi vida
-                            empiece contigo a mi lado, hoy y siempre." 🌟
+                            "Quiero que de ahora en adelante mi vida empiece contigo a mi lado, hoy y
+                            siempre." 🌟
                         </div>
                         <p class="page-text">
-                            No sé lo que nos depara el destino y cual sea la voluntad del señor para nosotros pero sé que
+                            No sé lo que nos depara el futuro y cual sea la voluntad del
+                            señor para nosotros pero sé que
                             <strong>contigo cualquier camino vale la pena.</strong>
-                            Es mi persona favorita mi lugar seguro 
+                            desde que tuve el valor para salir de mi zona de confort y acercarme a usted, hablarl con su familia y con el pastor para
+                            poder compartir parte de mi vida con usted, supe que quería un futuro a su lado.
+        
                         </p>
                         <div class="page-decoration">🌟 💫 🌟 💫 🌟</div>
                     </div>
@@ -292,11 +371,10 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                         <span class="page-number">Pág. 07</span>
                     </div>
                     <div class="page-content">
-                        <h2 class="page-title">¿Por Qué Te Amo?</h2>
+                        <h2 class="page-title">¿Por Qué La Amo?</h2>
                         <p class="page-text">
-                            Me han preguntado por qué te amo tanto.
-                            La verdad es que podría llenar mil libros
-                            con las razones, pero aquí van algunas:
+                            La verdad es que podría
+                            llenar mil libros con las razones, pero aquí van algunas:
                         </p>
                         <div class="promise-item">
                             <div class="promise-number">💕</div>
@@ -312,19 +390,19 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                         </div>
                         <div class="promise-item">
                             <div class="promise-number">💕</div>
-                            <span>Porque me acepta exactamente como soy de loco</span>
+                            <span>Porque me acepta exactamente como soy de loco jajaj</span>
                         </div>
                         <div class="promise-item">
                             <div class="promise-number">💕</div>
-                            <span>Porque contigo el tiempo vuela y aun así quiero más</span>
+                            <span>Porque con usted el tiempo vuela y aun así quiero más</span>
                         </div>
                         <div class="promise-item">
                             <div class="promise-number">💕</div>
-                            <span>Porque eres la respuesta del señor a mis oraciones</span>
+                            <span>Porque es la respuesta del señor a mis oraciones</span>
                         </div>
                         <div class="highlight-box">
-                            "Te amo no solo por quien eres,
-                            sino por quien soy cuando estoy contigo." 💖
+                            "La quiero no solo por quien es, sino por quien soy cuando estoy
+                            con usted" 💖
                         </div>
                         <div class="page-decoration">🌺 💖 🌺 💖 🌺</div>
                     </div>
@@ -341,36 +419,33 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                         <div class="final-heart-container">
                             <span class="final-heart">💝</span>
                         </div>
-                        <h2 class="page-title">Para Ti, Mi Todo</h2>
+                        <h2 class="page-title">Para Usted, Mi Todo</h2>
                         <div class="final-box">
                             <p class="final-message">
-                                "Este pequeño diario es solo una pequeña muestra
-                                de todo el amor que siento por usted.
-                                Las palabras nunca serán suficientes,
-                                pero espero que cada página la haya
-                                hecho sentir lo especial que es para mí."
+                                "Este pequeño diario es solo una pequeña muestra de todo el
+                                amor que siento por usted espero le haya gustado estuve construyendolo en mi cabeza por un tiempo y lo plasme Las palabras nunca serán
+                                suficientes pero espero que cada página la haya hecho sentir
+                                lo especial que es para mí."
                             </p>
                         </div>
                         <p class="page-text">
-                            Mi amor, gracias por leer hasta aquí.
-                            Gracias por ser mi inspiración, mi calma,
-                            mi alegría. Este diario no tiene
-                            fin porque nuestra historia apenas comienza.
-                            <br><br>
-                            Cada día contigo es una nueva página en blanco
-                            que quiero llenar de <em>momentos hermosos,
-                            risas eternas y amor infinito.</em>
+                            Mi Kimberly gracias por leer hasta aquí
+                             Gracias por ser mi inspiración, mi calma, mi alegría. 
+                             Este diario no tiene fin porque nuestra historia apenas comienza.
+                            <br /><br />
+                            Cada día que compartimos es una nueva página en blanco que quiero llenar
+                            de <em>momentos hermosos, risas eternas y amor infinito.</em>
                         </p>
                         <div class="final-box">
                             <p class="final-message">
-                                💕 Te amo hoy, mañana<br>
-                                y todos los días que vengan y nos regale Dios 💕<br><br>
+                                💕 La quiero hoy, mañana<br />
+                                y todos los días que vengan y nos regale Dios 💕<br /><br />
                                 <strong>Siempre Juntos</strong>
                             </p>
                         </div>
                         <div class="page-decoration">💝 ✨ 💝 ✨ 💝</div>
                         <div class="final-photo-wrap">
-                            <img src="nosotros.jpeg" alt="Nuestro amor" class="final-photo">
+                            <img src="nosotros.jpeg" alt="Nuestro amor" class="final-photo" />
                         </div>
                         <div class="signature">
                             Con todo mi amor
@@ -378,17 +453,15 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- FIN PÁGINAS -->
-
         </div>
         <!-- FIN LIBRO -->
     </div>
     <!-- FIN BOOK WRAPPER -->
 
     <!-- ===== NAVEGACIÓN ===== -->
-    <div class="navigation" id="navigation" style="display:none;">
+    <div class="navigation" id="navigation" style="display: none">
         <button class="nav-btn" id="prevBtn" onclick="changePage(-1)" disabled>
             ◀ Anterior
         </button>
@@ -402,10 +475,7 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
     </div>
 
     <!-- ===== BOTÓN VOLVER A PORTADA ===== -->
-    <button class="back-cover-btn"
-            id="backCoverBtn"
-            style="display:none;"
-            onclick="closeBook()">
+    <button class="back-cover-btn" id="backCoverBtn" style="display: none" onclick="closeBook()">
         📕 Volver a la Portada
     </button>
 
@@ -417,9 +487,10 @@ La reunión fue especial, pero lo que más recuerdo… fue conocerla por primera
 
     <!-- ===== AUDIO ===== -->
     <audio id="bgMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
     </audio>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -88,7 +88,7 @@ function createStars() {
 //         CORAZONES FLOTANTES
 // ============================================
 function createHearts() {
-    const emojis = ['💕', '❤️', '💖', '💗', '💓', '💝', '🌹', '✨', '💫'];
+    const emojis = ['💕', '🌷', '💖', '💗', '💓', '💝', '🌹'];
 
     heartsInterval = setInterval(() => {
         const heart = document.createElement('div');
@@ -580,7 +580,6 @@ const CONFIG = {
     miNombre:      'Lorenzo',       // Tu nombre
     suNombre:      'Kimberly',  // Nombre de tu novia
     fechaInicio:   '14 de Febrero',   // Fecha especial
-    lugarEspecial: 'Nuestro lugar',   // Lugar especial
 };
 
 // Aplicar personalización al cargar
@@ -602,7 +601,7 @@ function applyPersonalization() {
     const coverTitle = document.querySelector('.cover-title');
     if (coverTitle) {
         coverTitle.innerHTML =
-            `Nuestro Diario<br>de Amor`;
+            `Nuestra Historia`;
     }
 
     // Subtítulo de portada
@@ -710,14 +709,14 @@ document.addEventListener('visibilitychange', () => {
             bgMusic.pause();
         }
         // Cambiar título de pestaña
-        document.title = '💕 ¡Vuelve pronto, mi amor!';
+        document.title = '💕 ¡Regrese, mi kim!';
     } else {
         // Reanudar música
         if (musicPlaying) {
             bgMusic.play().catch(() => {});
         }
         // Restaurar título
-        document.title = '💕 Nuestro Diario de Amor';
+        document.title = '💕 Nuestra Pequeña Historia';
     }
 });
 
